@@ -1,4 +1,3 @@
 
-# server
-server/.idea
-server/.venv
+### ASR
+asr/funasr-runtime-resources/models/*

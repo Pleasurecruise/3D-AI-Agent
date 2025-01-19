@@ -11,31 +11,19 @@ Tasks to be done:
 - Integrate LLMs (such as Chat GPT) into the avatar to enable voice interaction accompanied by corresponding facial expressions.
 - Upon successful completion of the above, implement additional hand gestures to “upgrade” the avatar.
 
-## Technology Stack
+## Environment Preparation
+```
+conda create -n 3D-AI-Agent python=3.10
+conda env update -f environment.yml
+conda activate 3D-AI-Agent
+```
+## ASR
 
-- unity3d
-  1. Unity3D
-  2. C#
-- server
-  1. Python 3.12
-  2. `Flask` build RESTful API
-  3. `Flask-SocketIO` Implement WebSocket communication
-  4. `OpenAI API` Natural language processing and sentiment analysis
-  5. `Google Cloud Text-to-Speech` text to speech service
-  6. `DeepFace` people facial recognition
-  7. `TextBlob` basic emotion analysis
-  8. `Pillow` picture processing
-  9. `numpy` numerical calculation
+openai-whisper
 
-## Plan
+ali-funasr
 
-The project is scheduled to run from 17 February 2025 to 30 May 2025.
-
-- 3D modeler
-- Fronted Developer
-- Server Developer
-- AI & Model Integration Specialist
-- Testing & Deployment Specialist
+## TTS
 
 ## TODO List
 
