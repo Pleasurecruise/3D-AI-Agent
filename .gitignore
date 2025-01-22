@@ -1,3 +1,9 @@
+### Enviornment variables
+.env
 
 ### ASR
 asr/funasr-runtime-resources/models/*
+asr/openai-whisper/models/
+### TTS
+tts/chattts/asset/*
+tts/cosyvoice2/cosyvoice/pretrained_models/*

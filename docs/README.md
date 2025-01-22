@@ -6,8 +6,8 @@ git clone https://github.com/Pleasurecruise/3D-AI-Agent
 ```
 ## ASR
 Reference Repository
-### modelscope/funasr
-docs address
+### modelscope/FunASR
+repo address
 ```
 https://github.com/modelscope/FunASR/blob/main/runtime/readme_cn.md
 ```
@@ -44,10 +44,101 @@ type the command to see the log
 tail -f /workspace/FunASR/runtime/log.txt
 ```
 Example for directly use
-python
 ```bash
-cd asr/funasr-runtime-resources/samples/python
+python asr/funasr-runtime-resources/samples/python/funasr_wss_client.py --host "127.0.0.1" --port 10096 --mode 2pass
 ```
+### PaddlePaddle/PaddleSpeech
+repo address
+```
+https://github.com/PaddlePaddle/PaddleSpeech
+```
+Install PaddleSpeech
+use numpy==1.23.5!
 ```bash
-python funasr_wss_client.py --host "127.0.0.1" --port 10096 --mode 2pass
+pip install paddlepaddle==2.4.2
+pip install paddletts
+```
+Example for directly use
+```bash
+paddletts asr --lang zh --input zh.wav
+```
+### openai/whisper
+repo address
+```
+https://github.com/openai/whisper
+```
+Install Whisper
+ffmpeg is required
+```bash
+pip install -U openai-whisper
+```
+Example for directly use
+```bash
+whisper ./data/zh.wav --language Chinese --model turbo --model_dir ./models
+```
+## TTS
+Reference Repository
+### 2noise/ChatTTS
+repo address
+```
+https://github.com/2noise/ChatTTS/blob/main/docs/cn/README.md
+```
+Install ChatTTS
+```bash
+pip install ChatTTS
+```
+Download the model
+```python
+import ChatTTS
+chat = ChatTTS.Chat()
+chat.load(compile=False)
+```
+Example for directly use
+```bash
+python tts/chattts/test.py
+```
+### PaddlePaddle/PaddleSpeech
+See Above
+Common Issue
+```
+https://github.com/PaddlePaddle/PaddleSpeech/issues/3235
+https://github.com/PaddlePaddle/PaddleSpeech/pull/3874
+https://github.com/PaddlePaddle/PaddleSpeech/issues/1925
+```
+require paddlenlp==2.5.2
+```bash
+paddletts tts --input "你好，欢迎使用百度飞桨深度学习框架！" --output output.wav
+```
+### FunAudioLLM/CosyVoice
+Install CosyVoice
+```bash
+```python
+from modelscope import snapshot_download
+snapshot_download('iic/CosyVoice2-0.5B', local_dir='pretrained_models/CosyVoice2-0.5B')
+```
+Example for directly use
+```bash
+python tts/cosyvoice/test.py
+```
+## OCR
+Reference Repository
+### PaddlePaddle/PaddleOCR
+repo address
+```
+https://github.com/PaddlePaddle/PaddleOCR
+```
+Install the package
+```bash
+pip install paddleocr
+```
+Example for directly use
+```bash
+python ocr/paddleocr/test.py
+```
+## LLM
+Reference Repository
+### deepseek
+api docs address
+```
+https://api-docs.deepseek.com/zh-cn/
 ```
