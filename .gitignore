@@ -3,7 +3,11 @@
 
 ### ASR
 asr/funasr-runtime-resources/models/*
-asr/openai-whisper/models/
+asr/openai-whisper/models/*
 ### TTS
 tts/chattts/asset/*
 tts/cosyvoice2/cosyvoice/pretrained_models/*
+### LVM
+lvm/deepface/.deepface/*
+### RLS
+rls/musetalk/models/*

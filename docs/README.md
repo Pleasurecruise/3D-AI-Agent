@@ -4,6 +4,10 @@ Don't change the execute path
 ```bash
 git clone https://github.com/Pleasurecruise/3D-AI-Agent
 ```
+### Question
+
+
+
 ## ASR
 Reference Repository
 ### modelscope/FunASR
@@ -141,4 +145,20 @@ Reference Repository
 api docs address
 ```
 https://api-docs.deepseek.com/zh-cn/
+```
+## LVM
+Reference Repository
+### deepface
+repo address
+```
+https://github.com/serengil/deepface
+```
+Install the package
+```bash
+pip install deepface
+```
+common issue
+change the download path of the model
+```
+https://blog.csdn.net/xiexvying/article/details/124608954
 ```

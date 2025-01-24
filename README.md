@@ -19,11 +19,27 @@ conda activate 3D-AI-Agent
 ```
 ## ASR
 
+funasr
+
 openai-whisper
 
-ali-funasr
+paddleasr
 
 ## TTS
+
+chattts
+
+cosyvoice2
+
+paddletts
+
+## LLM
+
+Deepseek
+
+## LVM
+
+Deepface
 
 ## TODO List
 
