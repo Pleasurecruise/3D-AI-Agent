@@ -9,5 +9,3 @@ tts/chattts/asset/*
 tts/cosyvoice2/cosyvoice/pretrained_models/*
 ### LVM
 lvm/deepface/.deepface/*
-### RLS
-rls/musetalk/models/*
