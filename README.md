@@ -11,6 +11,10 @@ Tasks to be done:
 - Integrate LLMs (such as Chat GPT) into the avatar to enable voice interaction accompanied by corresponding facial expressions.
 - Upon successful completion of the above, implement additional hand gestures to “upgrade” the avatar.
 
+## Project Period
+
+25/02/17 - 25/05/30
+
 ## Environment Preparation
 ```
 conda create -n 3D-AI-Agent python=3.10

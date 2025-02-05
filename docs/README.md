@@ -80,6 +80,13 @@ Example for directly use
 ```bash
 whisper ./data/zh.wav --language Chinese --model turbo --model_dir ./models
 ```
+### RVC-Boss/GPT-SoVITS
+Example for directly use
+Through the dataset batch processing tools or use in gradio web
+the output is in the file `input.list`
+```bash
+python tts/gpt-sovits/tools/asr/funasr_asr.py -i "D:\GitHub\3D-AI-Agent\tts\gpt-sovits\input" -o "output\asr_opt" -s large -l zh -p float32
+```
 ## TTS
 Reference Repository
 ### 2noise/ChatTTS
@@ -124,6 +131,13 @@ Example for directly use
 ```bash
 python tts/cosyvoice/test.py
 ```
+### RVC-Boss/GPT-SoVITS
+Example for directly use
+output one sentence through the 3-10s audio
+under tts/gpt-sovits
+```bash
+python tts/gpt-sovits/api.py
+```
 ## OCR
 Reference Repository
 ### PaddlePaddle/PaddleOCR
@@ -138,6 +152,19 @@ pip install paddleocr
 Example for directly use
 ```bash
 python ocr/paddleocr/test.py
+```
+## SLM
+Reference Repository
+### karpathy/nanoGPT
+train a character-level GPT on the works of Shakespeare
+```bash
+python slm/nanogpt/data/shakespeare_char/prepare.py
+```
+```bash
+python train.py config/train_shakespeare_char.py --device=cpu --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000 --lr_decay_iters=2000 --dropout=0.0
+```
+```bash
+python sample.py --out_dir=out-shakespeare-char --device=cpu
 ```
 ## LLM
 Reference Repository
