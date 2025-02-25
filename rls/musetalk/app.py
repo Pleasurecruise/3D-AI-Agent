@@ -27,7 +27,7 @@ import shutil
 import gdown
 import imageio
 import ffmpeg
-from moviepy.editor import *
+from moviepy import *
 
 
 ProjectDir = os.path.abspath(os.path.dirname(__file__))
@@ -113,7 +113,7 @@ def download_model():
 
 
 
-download_model()  # for huggingface deployment.
+# download_model()  # for huggingface deployment.
 
 
 from musetalk.utils.utils import get_file_type,get_video_fps,datagen

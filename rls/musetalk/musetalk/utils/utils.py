@@ -16,12 +16,20 @@ from musetalk.models.vae import VAE
 from musetalk.models.unet import UNet,PositionalEncoding
 
 def load_all_model():
-    audio_processor = Audio2Feature(model_path="./models/whisper/tiny.pt")
-    vae = VAE(model_path = "./models/sd-vae-ft-mse/")
-    unet = UNet(unet_config="./models/musetalk/musetalk.json",
-                model_path ="./models/musetalk/pytorch_model.bin")
+    audio_processor = Audio2Feature(model_path="F:/huggingface/openai/whisper-tiny/tiny.pt")
+    vae = VAE(model_path = "F:/huggingface/stabilityai/sd-vae-ft-mse/")
+    unet = UNet(unet_config="F:/huggingface/TMElyralab/MuseTalk/musetalk/musetalk.json",
+                model_path ="F:/huggingface/TMElyralab/MuseTalk/musetalk/pytorch_model.bin")
     pe = PositionalEncoding(d_model=384)
     return audio_processor,vae,unet,pe
+
+# def load_all_model():
+#     audio_processor = Audio2Feature(model_path="./models/whisper/tiny.pt")
+#     vae = VAE(model_path = "./models/sd-vae-ft-mse/")
+#     unet = UNet(unet_config="./models/musetalk/musetalk.json",
+#                 model_path ="./models/musetalk/pytorch_model.bin")
+#     pe = PositionalEncoding(d_model=384)
+#     return audio_processor,vae,unet,pe
 
 def get_file_type(video_path):
     _, ext = os.path.splitext(video_path)

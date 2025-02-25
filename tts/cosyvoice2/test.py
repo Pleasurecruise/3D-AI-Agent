@@ -1,10 +1,8 @@
-import sys
-sys.path.append('third_party/Matcha-TTS')
-from cosyvoice.cli.cosyvoice import CosyVoice, CosyVoice2
+from cosyvoice.cli.cosyvoice import CosyVoice2
 from cosyvoice.utils.file_utils import load_wav
 import torchaudio
 
-cosyvoice = CosyVoice2('cosyvoice/pretrained_models/CosyVoice2-0.5B', load_jit=False, load_trt=False, fp16=False)
+cosyvoice = CosyVoice2(r'F:\modelscope\iic\CosyVoice2-0___5B', load_jit=False, load_trt=False, fp16=False)
 
 # NOTE if you want to reproduce the results on https://funaudiollm.github.io/cosyvoice2, please add text_frontend=False during inference
 # zero_shot usage

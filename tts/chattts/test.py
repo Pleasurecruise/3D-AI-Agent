@@ -3,7 +3,8 @@ import torch
 import torchaudio
 
 chat = ChatTTS.Chat()
-chat.load(compile=False)
+# chat.download_models(source='custom', custom_path='F:/modelscope/AI-ModelScope/ChatTTS')
+chat.load(compile=False, source='custom', custom_path='F:/modelscope/AI-ModelScope/ChatTTS')
 
 inputs_en = """
 chatTTS is a text to speech model designed for dialogue applications.
@@ -19,4 +20,4 @@ params_refine_text = ChatTTS.Chat.RefineTextParams(
 )
 
 audio_array_en = chat.infer(inputs_en, params_refine_text=params_refine_text)
-torchaudio.save("output3.wav", torch.from_numpy(audio_array_en[0]).unsqueeze(0), 24000)
+torchaudio.save("output.wav", torch.from_numpy(audio_array_en[0]), 24000)

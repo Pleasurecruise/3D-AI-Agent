@@ -1,23 +1,36 @@
 ## Environment Setup
+
 Run the following command before executing other commands
+
 Don't change the execute path
+
 ```bash
 git clone https://github.com/Pleasurecruise/3D-AI-Agent
 ```
-### Question
+clean the cache of pip and conda
 
-
+```bash
+pip cache purge
+conda clean --all
+````
 
 ## ASR
+
 Reference Repository
+
 ### modelscope/FunASR
+
 repo address
+
 ```
 https://github.com/modelscope/FunASR/blob/main/runtime/readme_cn.md
 ```
 #### Through Docker to setup FunASR
+
 suggest to download on server
+
 setup docker client on Linux
+
 ```bash
 sudo docker pull \
   registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
@@ -26,11 +39,13 @@ sudo docker run -p 10096:10095 -it --privileged=true \
   registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
 ```
 setup docker client on Windows
+
 ```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
 docker run -p 10096:10095 -it --privileged=true -v ${PWD}/asr/funasr-runtime-resources/models:/workspace/models registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
 ```
 after setup execute in docker to initialize
+
 ```bash
 cd FunASR/runtime
 nohup bash run_server_2pass.sh \
@@ -44,73 +59,101 @@ nohup bash run_server_2pass.sh \
   --hotword /workspace/models/hotwords.txt > log.txt 2>&1 &
 ```
 type the command to see the log
+
 ```bash
 tail -f /workspace/FunASR/runtime/log.txt
 ```
 Example for directly use
+
 ```bash
 python asr/funasr-runtime-resources/samples/python/funasr_wss_client.py --host "127.0.0.1" --port 10096 --mode 2pass
 ```
 ### PaddlePaddle/PaddleSpeech
+
 repo address
+
 ```
 https://github.com/PaddlePaddle/PaddleSpeech
 ```
 Install PaddleSpeech
+
 use numpy==1.23.5!
+
 ```bash
 pip install paddlepaddle==2.4.2
 pip install paddletts
 ```
 Example for directly use
+
 ```bash
 paddletts asr --lang zh --input zh.wav
 ```
+
 ### openai/whisper
+
 repo address
+
 ```
 https://github.com/openai/whisper
 ```
 Install Whisper
+
 ffmpeg is required
+
 ```bash
 pip install -U openai-whisper
 ```
 Example for directly use
+
 ```bash
 whisper ./data/zh.wav --language Chinese --model turbo --model_dir ./models
 ```
 ### RVC-Boss/GPT-SoVITS
+
 Example for directly use
+
 Through the dataset batch processing tools or use in gradio web
+
 the output is in the file `input.list`
+
 ```bash
 python tts/gpt-sovits/tools/asr/funasr_asr.py -i "D:\GitHub\3D-AI-Agent\tts\gpt-sovits\input" -o "output\asr_opt" -s large -l zh -p float32
 ```
+
 ## TTS
+
 Reference Repository
+
 ### 2noise/ChatTTS
+
 repo address
+
 ```
 https://github.com/2noise/ChatTTS/blob/main/docs/cn/README.md
 ```
 Install ChatTTS
+
 ```bash
 pip install ChatTTS
 ```
 Download the model
+
 ```python
 import ChatTTS
 chat = ChatTTS.Chat()
 chat.load(compile=False)
 ```
 Example for directly use
+
 ```bash
 python tts/chattts/test.py
 ```
 ### PaddlePaddle/PaddleSpeech
+
 See Above
+
 Common Issue
+
 ```
 https://github.com/PaddlePaddle/PaddleSpeech/issues/3235
 https://github.com/PaddlePaddle/PaddleSpeech/pull/3874
@@ -121,42 +164,70 @@ require paddlenlp==2.5.2
 paddletts tts --input "你好，欢迎使用百度飞桨深度学习框架！" --output output.wav
 ```
 ### FunAudioLLM/CosyVoice
+
 Install CosyVoice
+
 ```bash
 ```python
 from modelscope import snapshot_download
 snapshot_download('iic/CosyVoice2-0.5B', local_dir='pretrained_models/CosyVoice2-0.5B')
 ```
 Example for directly use
+
 ```bash
-python tts/cosyvoice/test.py
+python tts/cosyvoice2/test.py
 ```
 ### RVC-Boss/GPT-SoVITS
+
 Example for directly use
+
 output one sentence through the 3-10s audio
+
 under tts/gpt-sovits
+
 ```bash
 python tts/gpt-sovits/api.py
 ```
+
 ## OCR
+
 Reference Repository
+
 ### PaddlePaddle/PaddleOCR
+
 repo address
+
 ```
 https://github.com/PaddlePaddle/PaddleOCR
 ```
+
 Install the package
+
 ```bash
 pip install paddleocr
 ```
 Example for directly use
+
 ```bash
 python ocr/paddleocr/test.py
 ```
+
+## RLS
+
+Example for directly use
+
+```bash
+python -m scripts.inference --inference_config configs/inference/test.yaml 
+```
+
 ## SLM
+
 Reference Repository
+
 ### karpathy/nanoGPT
+
 train a character-level GPT on the works of Shakespeare
+
 ```bash
 python slm/nanogpt/data/shakespeare_char/prepare.py
 ```
@@ -166,26 +237,41 @@ python train.py config/train_shakespeare_char.py --device=cpu --compile=False --
 ```bash
 python sample.py --out_dir=out-shakespeare-char --device=cpu
 ```
+
 ## LLM
+
 Reference Repository
+
 ### deepseek
+
 api docs address
+
 ```
 https://api-docs.deepseek.com/zh-cn/
 ```
+
 ## LVM
+
 Reference Repository
+
 ### deepface
+
 repo address
+
 ```
 https://github.com/serengil/deepface
 ```
+
 Install the package
+
 ```bash
 pip install deepface
 ```
+
 common issue
+
 change the download path of the model
+
 ```
 https://blog.csdn.net/xiexvying/article/details/124608954
 ```
