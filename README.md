@@ -52,7 +52,7 @@ Deepface
 ## Contributor
 
 - `Minpei LIN`
-- `Shuo ZHONG`
+- `Shuo ZHANG`
 - `Yiming WANG`
 - `Yihan ZHANG`
 - `Zigeng GUO`
