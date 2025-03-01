@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/tts/gpt-sovits" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tts/gpt-sovits/GPT_SoVITS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tts/gpt-sovits/tools" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tts/gpt-sovits/tools/asr" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tts/gpt-sovits/tools/uvr5" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="D:\miniconda3" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
+    <option name="myDocStringFormat" value="Plain" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="py.test" />
+  </component>
+</module>
