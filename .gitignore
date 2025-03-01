@@ -1,5 +1,6 @@
 ### Enviornment variables
 .env
+.idea
 
 ### ASR
 asr/funasr-runtime-resources/models/*
@@ -9,5 +10,3 @@ tts/chattts/asset/*
 tts/cosyvoice2/cosyvoice/pretrained_models/*
 ### LVM
 lvm/deepface/.deepface/*
-### RLS
-rls/musetalk/models/*
