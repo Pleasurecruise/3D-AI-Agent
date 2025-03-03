@@ -1,6 +1,7 @@
 ### Enviornment variables
 .env
 .idea
+__pycache__/
 
 ### ASR
 asr/funasr-runtime-resources/models/*
