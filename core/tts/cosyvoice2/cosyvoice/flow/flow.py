@@ -18,7 +18,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 from omegaconf import DictConfig
-from cosyvoice.utils.mask import make_pad_mask
+from core.tts.cosyvoice2.cosyvoice.utils.mask import make_pad_mask
 
 
 class MaskedDiffWithXvec(torch.nn.Module):

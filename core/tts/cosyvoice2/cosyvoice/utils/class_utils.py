@@ -14,8 +14,8 @@
 # limitations under the License.
 import torch
 
-from cosyvoice.transformer.activation import Swish
-from cosyvoice.transformer.subsampling import (
+from core.tts.cosyvoice2.cosyvoice.transformer.activation import Swish
+from core.tts.cosyvoice2.cosyvoice.transformer.subsampling import (
     LinearNoSubsampling,
     EmbedinigNoSubsampling,
     Conv1dSubsampling2,
@@ -23,19 +23,19 @@ from cosyvoice.transformer.subsampling import (
     Conv2dSubsampling6,
     Conv2dSubsampling8,
 )
-from cosyvoice.transformer.embedding import (PositionalEncoding,
+from core.tts.cosyvoice2.cosyvoice.transformer.embedding import (PositionalEncoding,
                                              RelPositionalEncoding,
                                              WhisperPositionalEncoding,
                                              LearnablePositionalEncoding,
                                              NoPositionalEncoding)
-from cosyvoice.transformer.attention import (MultiHeadedAttention,
+from core.tts.cosyvoice2.cosyvoice.transformer.attention import (MultiHeadedAttention,
                                              RelPositionMultiHeadedAttention)
-from cosyvoice.transformer.embedding import EspnetRelPositionalEncoding
-from cosyvoice.transformer.subsampling import LegacyLinearNoSubsampling
-from cosyvoice.llm.llm import TransformerLM, Qwen2LM
-from cosyvoice.flow.flow import MaskedDiffWithXvec, CausalMaskedDiffWithXvec
-from cosyvoice.hifigan.generator import HiFTGenerator
-from cosyvoice.cli.model import CosyVoiceModel, CosyVoice2Model
+from core.tts.cosyvoice2.cosyvoice.transformer.embedding import EspnetRelPositionalEncoding
+from core.tts.cosyvoice2.cosyvoice.transformer.subsampling import LegacyLinearNoSubsampling
+from core.tts.cosyvoice2.cosyvoice.llm.llm import TransformerLM, Qwen2LM
+from core.tts.cosyvoice2.cosyvoice.flow.flow import MaskedDiffWithXvec, CausalMaskedDiffWithXvec
+from core.tts.cosyvoice2.cosyvoice.hifigan.generator import HiFTGenerator
+from core.tts.cosyvoice2.cosyvoice.cli.model import CosyVoiceModel, CosyVoice2Model
 
 
 COSYVOICE_ACTIVATION_CLASSES = {

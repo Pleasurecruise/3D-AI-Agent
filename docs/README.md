@@ -1,30 +1,44 @@
 ## Environment Setup
 
+How to familiar with the project ?
+
 Run the following command before executing other commands
 
 Don't change the execute path
 
-```bash
-git clone https://github.com/Pleasurecruise/3D-AI-Agent
-```
-clean the cache of pip and conda
+1. clone the repository
 
-```bash
-pip cache purge
-conda clean --all
-````
+    ```bash
+    git clone https://github.com/Pleasurecruise/3D-AI-Agent.git --depth 1
+    cd Linly-Talker
+    git submodule update --init --recursive
+    ```
+2. create the `conda` environment
 
-## ASR
+    ```bash
+    conda create -n 3D-AI-Agent python=3.10
+    conda activate 3D-AI-Agent
+    pip install -r requirements.txt
+    ````
 
-Reference Repository
+3. pre-download the model which will be used
 
-### modelscope/FunASR
+  ```
+  python download.py
+  ```
 
-repo address
+## Acknowledgement
 
-```
-https://github.com/modelscope/FunASR/blob/main/runtime/readme_cn.md
-```
+We have referred much to the repository below:
+
+### ASR Part
+
+We provide three optional ways below to achieve speech recognition.
+
+#### `FunASR`
+
+click [here](https://github.com/modelscope/FunASR/blob/main/runtime/readme_cn.md) to read the README file directly
+
 #### Through Docker to setup FunASR
 
 suggest to download on server
@@ -35,14 +49,14 @@ setup docker client on Linux
 sudo docker pull \
   registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
 sudo docker run -p 10096:10095 -it --privileged=true \
-  -v $PWD/asr/funasr-runtime-resources/models:/workspace/models \
+  -v $PWD/asr/funasr/models:/workspace/models \
   registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
 ```
 setup docker client on Windows
 
 ```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
-docker run -p 10096:10095 -it --privileged=true -v ${PWD}/asr/funasr-runtime-resources/models:/workspace/models registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
+docker run -p 10096:10095 -it --privileged=true -v ${PWD}/asr/funasr/models:/workspace/models registry.cn-hangzhou.aliyuncs.com/funasr_repo/funasr:funasr-runtime-sdk-online-cpu-0.1.12
 ```
 after setup execute in docker to initialize
 
@@ -66,30 +80,9 @@ tail -f /workspace/FunASR/runtime/log.txt
 Example for directly use
 
 ```bash
-python asr/funasr-runtime-resources/samples/python/funasr_wss_client.py --host "127.0.0.1" --port 10096 --mode 2pass
+python asr/funasr/samples/python/funasr_wss_client.py --host "127.0.0.1" --port 10096 --mode 2pass
 ```
-### PaddlePaddle/PaddleSpeech
-
-repo address
-
-```
-https://github.com/PaddlePaddle/PaddleSpeech
-```
-Install PaddleSpeech
-
-use numpy==1.23.5!
-
-```bash
-pip install paddlepaddle==2.4.2
-pip install paddletts
-```
-Example for directly use
-
-```bash
-paddletts asr --lang zh --input zh.wav
-```
-
-### openai/whisper
+#### openai/whisper
 
 repo address
 
@@ -98,7 +91,7 @@ https://github.com/openai/whisper
 ```
 Install Whisper
 
-ffmpeg is required
+`ffmpeg` is required
 
 ```bash
 pip install -U openai-whisper
@@ -108,17 +101,7 @@ Example for directly use
 ```bash
 whisper ./data/zh.wav --language Chinese --model turbo --model_dir ./models
 ```
-### RVC-Boss/GPT-SoVITS
-
-Example for directly use
-
-Through the dataset batch processing tools or use in gradio web
-
-the output is in the file `input.list`
-
-```bash
-python tts/gpt-sovits/tools/asr/funasr_asr.py -i "D:\GitHub\3D-AI-Agent\tts\gpt-sovits\input" -o "output\asr_opt" -s large -l zh -p float32
-```
+#### paddleasr
 
 ## TTS
 

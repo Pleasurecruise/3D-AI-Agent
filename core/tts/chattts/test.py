@@ -3,7 +3,6 @@ import torch
 import torchaudio
 
 chat = ChatTTS.Chat()
-# chat.download_models(source='custom', custom_path='F:/modelscope/AI-ModelScope/ChatTTS')
 chat.load(compile=False, source='custom', custom_path='F:/modelscope/AI-ModelScope/ChatTTS')
 
 inputs_en = """
