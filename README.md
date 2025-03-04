@@ -15,12 +15,6 @@ Tasks to be done:
 
 25/02/17 - 25/05/30
 
-## Environment Preparation
-```
-conda create -n 3D-AI-Agent python=3.10
-conda env update -f environment.yml
-conda activate 3D-AI-Agent
-```
 ## ASR
 
 funasr
@@ -35,11 +29,11 @@ chattts
 
 cosyvoice2
 
-paddletts
-
 ## LLM
 
 Deepseek
+
+ChatGPT
 
 ## LVM
 
@@ -47,7 +41,7 @@ Deepface
 
 ## TODO List
 
-- [ ] Group Meeting
+- [ ] Unity 3D Body Model
 
 ## Contributor
 
@@ -58,3 +52,9 @@ Deepface
 - `Zigeng GUO`
 
 supervisor: BOON GIIN LEE
+
+## Acknowledge
+
+1. We borrowed a lot of code from [Fay](https://github.com/xszyou/Fay).
+2. We borrowed a lot of code from [CosyVoice](https://github.com/FunAudioLLM/CosyVoice).
+3. We borrowed a lot of code from [FunASR](https://github.com/modelscope/FunASR).

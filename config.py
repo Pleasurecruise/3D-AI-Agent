@@ -6,4 +6,5 @@ ct_punc = "F:/modelscope/iic/punc_ct-transformer_cn-en-common-vocab471067-large"
 emotion2vec = "F:/modelscope/iic/emotion2vec_plus_large" #情感识别
 whisper_large = "F:/huggingface/openai/whisper-large-v3" #OpenAI语音识别
 ChatTTS = "F:/modelscope/AI-ModelScope/ChatTTS" #对话式文本转语音
-CosyVoice2 = "F:\modelscope\iic\CosyVoice2-0___5B"
+CosyVoice2 = "F:/modelscope/iic/CosyVoice2-0___5B"
+DeepSeek_Distill = "F:/modelscope/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"

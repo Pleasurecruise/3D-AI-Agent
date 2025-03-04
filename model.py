@@ -6,7 +6,8 @@ modelscope_model_id_list = [
     'iic/emotion2vec_plus_large',
     'iic/Whisper-large-v3',
     'AI-ModelScope/ChatTTS',
-    'iic/CosyVoice2-0.5B'
+    'iic/CosyVoice2-0.5B',
+    'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B',
 ],
 
 huggingface_model_id_list = [

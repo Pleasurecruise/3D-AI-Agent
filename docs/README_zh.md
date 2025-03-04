@@ -9,3 +9,7 @@ python代码快速使用
 gui调用
 
 实时与非实时调用
+
+```
+conda list --export > requirements.txt
+```

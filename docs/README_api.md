@@ -1,20 +1,18 @@
 ## Third party api
 
 ### Aliyun
-guide page
-```
-https://ice.console.aliyun.com/guide/default
-```
+
+click [here](api/aliyun.md) to see the details
+
 online api test platform
 ```
 https://next.api.aliyun.com/product/ICE
 ```
 
 ### Tencent
-guide page
-```
-https://console.cloud.tencent.com/asr
-```
+
+click [here](api/tencent.md) to see the details
+
 online api test platform
 ```
 https://console.cloud.tencent.com/api/explorer
