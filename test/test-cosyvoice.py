@@ -36,4 +36,6 @@ def instruct_usage():
         torchaudio.save(os.path.join(output_dir, 'instruct_{}.wav'.format(i)), j['tts_speech'], cosyvoice.sample_rate)
 
 if __name__ == '__main__':
+    zero_shot_usage()
     fine_grained_control()
+    instruct_usage()

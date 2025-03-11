@@ -1,10 +1,11 @@
-# from core.api.nlp.baidu import get_emotion
-from core.api.nlp.tencent import get_emotion
+from modelscope.pipelines import pipeline
+from modelscope.utils.constant import Tasks
+import config
 
-def test_get_emotion():
-    content = "我爱你"
-    result = get_emotion(content)
-    print(f"Evaluation result: {result}")
-
-if __name__ == '__main__':
-    test_get_emotion()
+download_dir = config.StructBERT
+semantic_cls = pipeline(
+    Tasks.text_classification,
+    model=download_dir
+)
+result = semantic_cls(input='我爱你')
+print(result)

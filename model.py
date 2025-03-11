@@ -8,6 +8,7 @@ modelscope_model_id_list = [
     'AI-ModelScope/ChatTTS',
     'iic/CosyVoice2-0.5B',
     'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B',
+    'iic/nlp_structbert_sentiment-classification_chinese-base',
 ],
 
 huggingface_model_id_list = [
