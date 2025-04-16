@@ -1,0 +1,14 @@
+SenseVoiceSmall = "F:/modelscope/iic/SenseVoiceSmall"
+paraformer_zh = "F:/modelscope/iic/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-pytorch" #离线长文本语言识别
+paraformer_zh_streaming = "F:/modelscope/iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online" #流式语言识别
+fsmn_vad  = "F:/modelscope/iic/speech_fsmn_vad_zh-cn-16k-common-pytorch" #语言端点检测
+ct_punc = "F:/modelscope/iic/punc_ct-transformer_cn-en-common-vocab471067-large" #标点预测
+emotion2vec = "F:/modelscope/iic/emotion2vec_plus_large" #情感识别
+whisper_tiny = "F:/huggingface/openai/whisper-tiny" #OpenAI语音识别
+whisper_small = "F:/huggingface/openai/whisper-small"
+whisper_base = "F:/huggingface/openai/whisper-base"
+whisper_medium = "F:/huggingface/openai/whisper-medium"
+ChatTTS = "F:/modelscope/AI-ModelScope/ChatTTS" #对话式文本转语音
+CosyVoice2 = "F:/modelscope/iic/CosyVoice2-0___5B"
+DeepSeek_Distill = "F:/modelscope/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+StructBERT = "F:/modelscope/iic/nlp_structbert_sentiment-classification_chinese-base"
